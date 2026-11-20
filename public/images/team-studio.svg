@@ -1,0 +1,162 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 1000" width="2000" height="1000" role="img">
+  <defs>
+    <linearGradient id="tWall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#20211d"/>
+      <stop offset="1" stop-color="#100f0e"/>
+    </linearGradient>
+    <linearGradient id="tDusk" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#16222b"/>
+      <stop offset="0.55" stop-color="#3a3a32"/>
+      <stop offset="1" stop-color="#7a6446"/>
+    </linearGradient>
+    <linearGradient id="tTable" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8a7355"/>
+      <stop offset="1" stop-color="#3a3128"/>
+    </linearGradient>
+    <linearGradient id="tLight" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f6d9ae" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#f6d9ae" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="tLamp" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffd9a0" stop-opacity="0.65"/>
+      <stop offset="0.4" stop-color="#f3bd7d" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#f3bd7d" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="tBlur" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="26"/>
+    </filter>
+    <filter id="tBlurS" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+    <radialGradient id="tVig" cx="0.5" cy="0.45" r="0.8">
+      <stop offset="0.4" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0.55"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="2000" height="1000" fill="url(#tWall)"/>
+
+  <!-- window wall on the right -->
+  <g>
+    <rect x="1180" y="0" width="820" height="720" fill="url(#tDusk)"/>
+    <!-- skyline -->
+    <g fill="#0e171c" opacity="0.9">
+      <rect x="1220" y="430" width="90" height="290"/>
+      <rect x="1320" y="380" width="70" height="340"/>
+      <rect x="1400" y="470" width="110" height="250"/>
+      <rect x="1520" y="330" width="80" height="390"/>
+      <rect x="1610" y="440" width="120" height="280"/>
+      <rect x="1740" y="390" width="90" height="330"/>
+      <rect x="1840" y="470" width="140" height="250"/>
+    </g>
+    <g fill="#f3c98f" opacity="0.55">
+      <rect x="1240" y="470" width="10" height="12"/>
+      <rect x="1266" y="500" width="10" height="12"/>
+      <rect x="1340" y="420" width="10" height="12"/>
+      <rect x="1364" y="452" width="10" height="12"/>
+      <rect x="1540" y="370" width="10" height="12"/>
+      <rect x="1564" y="402" width="10" height="12"/>
+      <rect x="1760" y="430" width="10" height="12"/>
+      <rect x="1860" y="500" width="10" height="12"/>
+    </g>
+    <!-- mullions -->
+    <g stroke="#0b1114" stroke-width="12" opacity="0.95">
+      <path d="M1180 0 V720 M1400 0 V720 M1620 0 V720 M1840 0 V720 M2000 0 V720"/>
+      <path d="M1180 240 H2000 M1180 480 H2000"/>
+    </g>
+    <rect x="1160" y="0" width="24" height="740" fill="#171512"/>
+  </g>
+
+  <!-- ceiling + lamps -->
+  <rect x="0" y="0" width="2000" height="120" fill="#141311"/>
+  <g>
+    <path d="M420 120 V250" stroke="#2c2a25" stroke-width="3"/>
+    <path d="M980 120 V250" stroke="#2c2a25" stroke-width="3"/>
+    <path d="M760 120 V210" stroke="#2c2a25" stroke-width="3"/>
+    <g fill="#f6d9ae">
+      <path d="M380 250 h80 l-14 34 h-52 Z" opacity="0.9"/>
+      <path d="M940 250 h80 l-14 34 h-52 Z" opacity="0.9"/>
+      <path d="M730 210 h60 l-10 26 h-40 Z" opacity="0.75"/>
+    </g>
+    <ellipse cx="420" cy="290" rx="220" ry="150" fill="url(#tLamp)"/>
+    <ellipse cx="980" cy="290" rx="240" ry="160" fill="url(#tLamp)"/>
+  </g>
+
+  <!-- back wall pin-ups -->
+  <g>
+    <rect x="180" y="180" width="420" height="300" fill="#1b1a17" stroke="#2e2c27" stroke-width="3"/>
+    <g fill="#c9c3b4" opacity="0.5">
+      <rect x="210" y="212" width="150" height="110"/>
+      <rect x="380" y="212" width="120" height="150"/>
+      <rect x="210" y="340" width="200" height="110"/>
+      <rect x="430" y="380" width="140" height="70"/>
+    </g>
+    <g stroke="#8f8b80" stroke-width="1" opacity="0.4">
+      <path d="M222 240 H348 M222 258 H330 M222 276 H340 M392 240 H488 M392 258 H470 M392 276 H482"/>
+    </g>
+  </g>
+
+  <!-- table -->
+  <g>
+    <ellipse cx="900" cy="780" rx="620" ry="150" fill="#0d0c0a" opacity="0.55" filter="url(#tBlur)"/>
+    <path d="M320 700 L1480 700 L1560 800 L240 800 Z" fill="url(#tTable)"/>
+    <path d="M320 700 L1480 700 L1480 726 L320 726 Z" fill="#a28864" opacity="0.6"/>
+    <!-- drawings on table -->
+    <g fill="#e6e0d2" opacity="0.72">
+      <path d="M600 720 L840 720 L860 776 L610 776 Z"/>
+      <path d="M900 722 L1080 722 L1100 772 L912 772 Z"/>
+    </g>
+    <g stroke="#8d8577" stroke-width="1.4" opacity="0.6">
+      <path d="M630 740 H810 M630 754 H790 M636 766 H760"/>
+      <path d="M928 740 H1052 M928 754 H1030"/>
+    </g>
+    <ellipse cx="840" cy="740" rx="360" ry="60" fill="#f6d9ae" opacity="0.22" filter="url(#tBlurS)"/>
+  </g>
+
+  <!-- people silhouettes -->
+  <g fill="#0f0e0c">
+    <!-- left -->
+    <g>
+      <circle cx="470" cy="560" r="44"/>
+      <path d="M400 700 C 400 622 440 596 470 596 C 500 596 540 622 540 700 Z"/>
+    </g>
+    <!-- centre-left leaning -->
+    <g>
+      <circle cx="700" cy="536" r="42"/>
+      <path d="M632 700 C 632 618 670 578 700 578 C 730 578 768 618 768 700 Z"/>
+      <path d="M726 610 L800 690 L790 700 L716 626 Z"/>
+    </g>
+    <!-- centre-right pointing -->
+    <g>
+      <circle cx="960" cy="546" r="40"/>
+      <path d="M896 700 C 896 624 932 588 960 588 C 988 588 1024 624 1024 700 Z"/>
+      <path d="M1002 620 L1090 660 L1086 674 L996 636 Z"/>
+    </g>
+    <!-- right seated -->
+    <g>
+      <circle cx="1220" cy="560" r="42"/>
+      <path d="M1152 700 C 1152 622 1190 596 1220 596 C 1250 596 1288 622 1288 700 Z"/>
+    </g>
+  </g>
+  <!-- rim light on figures -->
+  <g stroke="#e9cba4" stroke-width="3" opacity="0.4" fill="none">
+    <path d="M492 528 a44 44 0 0 1 20 26"/>
+    <path d="M722 506 a42 42 0 0 1 18 24"/>
+    <path d="M980 516 a40 40 0 0 1 18 24"/>
+    <path d="M1240 530 a42 42 0 0 1 18 24"/>
+  </g>
+
+  <!-- plant -->
+  <g>
+    <path d="M1700 720 L1800 720 L1786 900 L1714 900 Z" fill="#241f19"/>
+    <g fill="#2f3f2c">
+      <ellipse cx="1730" cy="660" rx="46" ry="70" transform="rotate(-14 1730 660)"/>
+      <ellipse cx="1776" cy="640" rx="40" ry="66" transform="rotate(12 1776 640)"/>
+      <ellipse cx="1748" cy="600" rx="34" ry="56" transform="rotate(-4 1748 600)"/>
+    </g>
+  </g>
+
+  <!-- foreground vignette -->
+  <rect x="0" y="800" width="2000" height="200" fill="#0a0908" opacity="0.85"/>
+  <rect width="2000" height="1000" fill="url(#tVig)"/>
+</svg>

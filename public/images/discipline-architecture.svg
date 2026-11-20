@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1500" width="1200" height="1500" role="img">
+  <defs>
+    <linearGradient id="aSky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b1620"/>
+      <stop offset="0.55" stop-color="#1d3138"/>
+      <stop offset="1" stop-color="#5c5341"/>
+    </linearGradient>
+    <linearGradient id="aFacade" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2a3233"/>
+      <stop offset="1" stop-color="#161d1f"/>
+    </linearGradient>
+    <linearGradient id="aGlow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f6d9b0" stop-opacity="0.85"/>
+      <stop offset="0.6" stop-color="#e9cba4" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#c9a173" stop-opacity="0.22"/>
+    </linearGradient>
+    <linearGradient id="aFloor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#23282a"/>
+      <stop offset="1" stop-color="#0c1112"/>
+    </linearGradient>
+    <radialGradient id="aSun" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#f2c78f" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#f2c78f" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="aCurve">
+      <path d="M110 1220 L110 706 Q600 400 1090 706 L1090 1220 Z"/>
+    </clipPath>
+    <filter id="aBlur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="22"/>
+    </filter>
+    <radialGradient id="aVig" cx="0.5" cy="0.42" r="0.8">
+      <stop offset="0.45" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0.5"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="1500" fill="url(#aSky)"/>
+  <circle cx="880" cy="420" r="380" fill="url(#aSun)"/>
+  <circle cx="930" cy="300" r="8" fill="#f7ecda" opacity="0.6"/>
+
+  <!-- distant ridge -->
+  <path d="M0 760 L160 690 L300 742 L470 676 L620 740 L800 682 L980 748 L1200 692 L1200 820 L0 820 Z" fill="#122028" opacity="0.9"/>
+
+  <!-- curved building -->
+  <path d="M110 1220 L110 706 Q600 400 1090 706 L1090 1220 Z" fill="url(#aFacade)"/>
+  <g clip-path="url(#aCurve)">
+    <rect x="110" y="640" width="980" height="620" fill="url(#aGlow)" opacity="0.75"/>
+    <!-- floor bands -->
+    <g stroke="#1a2021" stroke-width="10" opacity="0.85">
+      <path d="M100 800 H1100"/>
+      <path d="M100 930 H1100"/>
+      <path d="M100 1060 H1100"/>
+      <path d="M100 1190 H1100"/>
+    </g>
+    <!-- mullions -->
+    <g stroke="#141b1c" stroke-width="7" opacity="0.8">
+      <path d="M210 600 V1230"/>
+      <path d="M330 548 V1230"/>
+      <path d="M450 508 V1230"/>
+      <path d="M570 492 V1230"/>
+      <path d="M690 500 V1230"/>
+      <path d="M810 534 V1230"/>
+      <path d="M930 596 V1230"/>
+      <path d="M1050 682 V1230"/>
+    </g>
+    <!-- silhouettes inside -->
+    <g fill="#0f1516" opacity="0.55">
+      <rect x="238" y="1000" width="70" height="190"/>
+      <rect x="470" y="1060" width="90" height="130"/>
+      <rect x="700" y="1020" width="64" height="170"/>
+      <rect x="860" y="1070" width="110" height="120"/>
+    </g>
+  </g>
+  <!-- roof edge highlight -->
+  <path d="M110 706 Q600 400 1090 706" fill="none" stroke="#4d5551" stroke-width="5"/>
+  <path d="M110 706 Q600 400 1090 706" fill="none" stroke="#e9cba4" stroke-width="2" opacity="0.35"/>
+
+  <!-- left low wing -->
+  <path d="M0 1220 L0 940 L160 900 L160 1220 Z" fill="#1a2123"/>
+  <g stroke="#e9cba4" stroke-width="1" opacity="0.3">
+    <path d="M24 968 H136 M24 1030 H136 M24 1092 H136 M24 1154 H136"/>
+  </g>
+
+  <!-- plaza -->
+  <path d="M0 1220 L1200 1220 L1200 1500 L0 1500 Z" fill="url(#aFloor)"/>
+  <ellipse cx="600" cy="1250" rx="440" ry="40" fill="#e9cba4" opacity="0.16" filter="url(#aBlur)"/>
+  <g stroke="#e9cba4" stroke-width="2" opacity="0.18">
+    <path d="M110 1260 V1440"/>
+    <path d="M1090 1260 V1440"/>
+    <path d="M210 1250 V1460"/>
+    <path d="M990 1250 V1460"/>
+  </g>
+  <g fill="#1d2722">
+    <ellipse cx="120" cy="1320" rx="70" ry="34"/>
+    <ellipse cx="1080" cy="1330" rx="80" ry="38"/>
+  </g>
+  <rect width="1200" height="1500" fill="url(#aVig)"/>
+</svg>

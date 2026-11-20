@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900" role="img">
+  <defs>
+    <linearGradient id="pSky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0a1420"/>
+      <stop offset="0.5" stop-color="#20333a"/>
+      <stop offset="1" stop-color="#6a5f46"/>
+    </linearGradient>
+    <linearGradient id="pGround" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1e2a22"/>
+      <stop offset="1" stop-color="#0b1110"/>
+    </linearGradient>
+    <linearGradient id="pWater" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5a5c48" stop-opacity="0.7"/>
+      <stop offset="1" stop-color="#12201f"/>
+    </linearGradient>
+    <radialGradient id="pSun" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#f6d3a2" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#f6d3a2" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="pBlur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="20"/>
+    </filter>
+    <filter id="pBlurS" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+    <radialGradient id="pVig" cx="0.5" cy="0.45" r="0.8">
+      <stop offset="0.42" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0.52"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#pSky)"/>
+  <circle cx="1120" cy="470" r="330" fill="url(#pSun)"/>
+  <path d="M0 430 L180 366 L360 424 L560 358 L760 428 L960 366 L1160 430 L1400 380 L1400 560 L0 560 Z" fill="#152430" opacity="0.9"/>
+
+  <!-- distant city edge -->
+  <g fill="#101b20" opacity="0.9">
+    <rect x="60" y="420" width="70" height="120"/>
+    <rect x="146" y="392" width="52" height="148"/>
+    <rect x="1210" y="404" width="70" height="136"/>
+    <rect x="1296" y="430" width="84" height="110"/>
+  </g>
+
+  <!-- park ground -->
+  <path d="M0 540 L1400 540 L1400 900 L0 900 Z" fill="url(#pGround)"/>
+
+  <!-- water body -->
+  <path d="M420 620 C 620 580 880 588 1080 640 C 980 700 700 716 520 686 Z" fill="url(#pWater)"/>
+  <g stroke="#e9cba4" stroke-width="2" opacity="0.25">
+    <path d="M560 636 C 680 620 840 624 960 650"/>
+    <path d="M600 664 C 720 650 860 654 980 676"/>
+  </g>
+  <ellipse cx="760" cy="640" rx="260" ry="30" fill="#f3d6ab" opacity="0.12" filter="url(#pBlur)"/>
+
+  <!-- winding path -->
+  <g fill="none" stroke-linecap="round">
+    <path d="M120 900 C 320 800 420 760 640 720 S 1000 660 1260 610" stroke="#e9cba4" stroke-width="26" opacity="0.16" filter="url(#pBlurS)"/>
+    <path d="M120 900 C 320 800 420 760 640 720 S 1000 660 1260 610" stroke="#f3d6ab" stroke-width="4" opacity="0.5"/>
+  </g>
+
+  <!-- tree clusters -->
+  <g>
+    <g fill="#1d2b22">
+      <ellipse cx="200" cy="600" rx="90" ry="70"/>
+      <ellipse cx="300" cy="640" rx="70" ry="52"/>
+      <ellipse cx="120" cy="660" rx="80" ry="58"/>
+      <ellipse cx="1120" cy="600" rx="88" ry="66"/>
+      <ellipse cx="1240" cy="650" rx="76" ry="56"/>
+      <ellipse cx="1330" cy="600" rx="70" ry="50"/>
+      <ellipse cx="860" cy="760" rx="72" ry="52"/>
+      <ellipse cx="420" cy="780" rx="66" ry="46"/>
+    </g>
+    <g fill="#2b3b2c" opacity="0.85">
+      <ellipse cx="186" cy="578" rx="62" ry="46"/>
+      <ellipse cx="1104" cy="578" rx="60" ry="44"/>
+      <ellipse cx="1264" cy="630" rx="52" ry="38"/>
+      <ellipse cx="848" cy="744" rx="50" ry="34"/>
+    </g>
+    <g stroke="#3f5138" stroke-width="6" opacity="0.8">
+      <path d="M200 660 V720 M1120 656 V716 M860 800 V846"/>
+    </g>
+  </g>
+
+  <!-- pavilion / pergola -->
+  <g>
+    <rect x="620" y="430" width="240" height="14" fill="#2c3636"/>
+    <rect x="620" y="430" width="240" height="4" fill="#e9cba4" opacity="0.4"/>
+    <g fill="#1b2324">
+      <rect x="634" y="444" width="10" height="110"/>
+      <rect x="836" y="444" width="10" height="110"/>
+      <rect x="730" y="444" width="8" height="110"/>
+    </g>
+    <ellipse cx="740" cy="556" rx="130" ry="16" fill="#f3d6ab" opacity="0.3" filter="url(#pBlurS)"/>
+  </g>
+
+  <!-- lamps -->
+  <g fill="#f3d6ab">
+    <circle cx="470" cy="700" r="4"/>
+    <circle cx="470" cy="700" r="14" opacity="0.2" filter="url(#pBlurS)"/>
+    <circle cx="960" cy="676" r="4"/>
+    <circle cx="960" cy="676" r="14" opacity="0.2" filter="url(#pBlurS)"/>
+    <circle cx="300" cy="830" r="3.4"/>
+  </g>
+
+  <rect width="1400" height="900" fill="url(#pVig)"/>
+</svg>
