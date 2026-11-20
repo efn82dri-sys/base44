@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1500" width="1200" height="1500" role="img">
+  <defs>
+    <linearGradient id="sSky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1b262b"/>
+      <stop offset="0.55" stop-color="#3a403c"/>
+      <stop offset="1" stop-color="#6d6249"/>
+    </linearGradient>
+    <linearGradient id="sConcrete" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#c9c2b2"/>
+      <stop offset="0.35" stop-color="#9b9587"/>
+      <stop offset="0.7" stop-color="#6d6a60"/>
+      <stop offset="1" stop-color="#464641"/>
+    </linearGradient>
+    <linearGradient id="sConcreteDark" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#6d6a60"/>
+      <stop offset="1" stop-color="#2f3130"/>
+    </linearGradient>
+    <linearGradient id="sFloor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4b4a44"/>
+      <stop offset="0.4" stop-color="#2c2e2d"/>
+      <stop offset="1" stop-color="#14181a"/>
+    </linearGradient>
+    <radialGradient id="sSun" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#f6d8ac" stop-opacity="0.6"/>
+      <stop offset="1" stop-color="#f6d8ac" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="sBlur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="26"/>
+    </filter>
+    <filter id="sBlurS" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+    <radialGradient id="sVig" cx="0.5" cy="0.45" r="0.8">
+      <stop offset="0.42" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0.55"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="1500" fill="url(#sSky)"/>
+  <circle cx="960" cy="330" r="360" fill="url(#sSun)"/>
+
+  <!-- rear frame -->
+  <g>
+    <rect x="0" y="0" width="1200" height="220" fill="#242a2b"/>
+    <g stroke="#4a4a42" stroke-width="3" opacity="0.6">
+      <path d="M0 150 H1200"/>
+    </g>
+  </g>
+
+  <!-- deep beams -->
+  <g>
+    <rect x="0" y="220" width="1200" height="120" fill="url(#sConcrete)"/>
+    <rect x="0" y="340" width="1200" height="18" fill="#2a2c2b"/>
+    <rect x="0" y="220" width="1200" height="6" fill="#ded7c6" opacity="0.4"/>
+  </g>
+
+  <!-- columns -->
+  <g>
+    <!-- back row -->
+    <rect x="120" y="358" width="110" height="880" fill="url(#sConcreteDark)"/>
+    <rect x="470" y="358" width="110" height="880" fill="url(#sConcreteDark)"/>
+    <rect x="820" y="358" width="110" height="880" fill="url(#sConcreteDark)"/>
+    <!-- front row -->
+    <rect x="-40" y="300" width="180" height="960" fill="url(#sConcrete)"/>
+    <rect x="330" y="300" width="180" height="960" fill="url(#sConcrete)"/>
+    <rect x="700" y="300" width="180" height="960" fill="url(#sConcrete)"/>
+    <rect x="1070" y="300" width="180" height="960" fill="url(#sConcrete)"/>
+    <!-- chamfers -->
+    <g fill="#e5dfd0" opacity="0.25">
+      <rect x="-40" y="300" width="12" height="960"/>
+      <rect x="330" y="300" width="12" height="960"/>
+      <rect x="700" y="300" width="12" height="960"/>
+      <rect x="1070" y="300" width="12" height="960"/>
+    </g>
+  </g>
+
+  <!-- floor -->
+  <path d="M0 1180 L1200 1180 L1200 1500 L0 1500 Z" fill="url(#sFloor)"/>
+  <g stroke="#1a1d1e" stroke-width="2" opacity="0.8">
+    <path d="M0 1260 H1200 M0 1340 H1200 M0 1420 H1200"/>
+  </g>
+
+  <!-- shadows on floor -->
+  <g fill="#0c1011" opacity="0.6" filter="url(#sBlurS)">
+    <path d="M140 1180 L420 1180 L680 1500 L240 1500 Z"/>
+    <path d="M510 1180 L760 1180 L1010 1500 L620 1500 Z"/>
+    <path d="M880 1180 L1120 1180 L1200 1350 L1200 1500 L960 1500 Z"/>
+  </g>
+
+  <!-- warm rim light -->
+  <g stroke="#f2d2a6" stroke-width="3" opacity="0.35">
+    <path d="M330 300 V1260"/>
+    <path d="M700 300 V1260"/>
+    <path d="M510 358 V1238"/>
+    <path d="M860 358 V1238"/>
+  </g>
+
+  <!-- rebar / tie details -->
+  <g stroke="#5c5a52" stroke-width="3" opacity="0.7">
+    <path d="M330 620 H510 M700 620 H880 M330 940 H510 M700 940 H880"/>
+  </g>
+  <g fill="#3a3b37">
+    <rect x="320" y="640" width="200" height="24" rx="3"/>
+    <rect x="690" y="640" width="200" height="24" rx="3"/>
+    <rect x="320" y="960" width="200" height="24" rx="3"/>
+    <rect x="690" y="960" width="200" height="24" rx="3"/>
+  </g>
+
+  <rect width="1200" height="1500" fill="url(#sVig)"/>
+</svg>

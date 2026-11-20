@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1500" width="1200" height="1500" role="img">
+  <defs>
+    <linearGradient id="eRoom" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1c2426"/>
+      <stop offset="1" stop-color="#0b1011"/>
+    </linearGradient>
+    <linearGradient id="eWall" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#171e20"/>
+      <stop offset="1" stop-color="#222a2c"/>
+    </linearGradient>
+    <linearGradient id="eMetal" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#9aa3a1"/>
+      <stop offset="0.35" stop-color="#6b7574"/>
+      <stop offset="0.6" stop-color="#3f4949"/>
+      <stop offset="1" stop-color="#242c2d"/>
+    </linearGradient>
+    <linearGradient id="eMetal2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#7d8785"/>
+      <stop offset="0.5" stop-color="#4c5655"/>
+      <stop offset="1" stop-color="#2a3233"/>
+    </linearGradient>
+    <linearGradient id="ePipe" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#c3d39a"/>
+      <stop offset="0.45" stop-color="#7f8f57"/>
+      <stop offset="1" stop-color="#3f4a2c"/>
+    </linearGradient>
+    <radialGradient id="eLamp" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#f6d8ac" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#f6d8ac" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="eBlur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <radialGradient id="eVig" cx="0.5" cy="0.45" r="0.78">
+      <stop offset="0.4" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0.55"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="1500" fill="url(#eRoom)"/>
+  <rect x="0" y="0" width="1200" height="980" fill="url(#eWall)"/>
+
+  <!-- ceiling structure -->
+  <g stroke="#39413f" stroke-width="10" opacity="0.7">
+    <path d="M0 120 H1200"/>
+    <path d="M0 220 H1200"/>
+  </g>
+  <g stroke="#2a3231" stroke-width="6" opacity="0.6">
+    <path d="M120 0 V240 M420 0 V240 M720 0 V240 M1020 0 V240"/>
+  </g>
+
+  <!-- light pools -->
+  <ellipse cx="300" cy="300" rx="260" ry="200" fill="url(#eLamp)"/>
+  <ellipse cx="900" cy="380" rx="280" ry="220" fill="url(#eLamp)"/>
+
+  <!-- large main duct (perspective) -->
+  <g>
+    <path d="M60 420 L520 360 L520 560 L60 640 Z" fill="url(#eMetal)"/>
+    <path d="M60 640 L520 560 L520 610 L60 700 Z" fill="#1c2425"/>
+    <path d="M520 360 L720 396 L720 588 L520 560 Z" fill="url(#eMetal2)"/>
+    <g stroke="#22292a" stroke-width="3" opacity="0.6">
+      <path d="M140 410 L140 628 M230 396 L230 610 M320 382 L320 592 M410 370 L410 574 M490 362 L490 562"/>
+    </g>
+    <path d="M60 420 L520 360" stroke="#b7c1bd" stroke-width="2" opacity="0.5"/>
+  </g>
+
+  <!-- vertical riser -->
+  <g>
+    <path d="M720 396 L800 412 L800 1180 L720 1160 Z" fill="url(#eMetal2)"/>
+    <path d="M720 396 L760 404 L760 1170 L720 1160 Z" fill="#8b9491" opacity="0.55"/>
+    <g stroke="#1c2425" stroke-width="4" opacity="0.7">
+      <path d="M724 520 H798 M724 700 H798 M724 880 H798 M724 1060 H798"/>
+    </g>
+  </g>
+
+  <!-- secondary duct -->
+  <g>
+    <path d="M60 760 L430 720 L430 850 L60 900 Z" fill="url(#eMetal)"/>
+    <path d="M60 900 L430 850 L430 884 L60 936 Z" fill="#1a2223"/>
+    <path d="M430 720 L520 734 L520 862 L430 850 Z" fill="#3c4645"/>
+  </g>
+
+  <!-- green pipework -->
+  <g>
+    <path d="M0 1040 H980" stroke="url(#ePipe)" stroke-width="34" stroke-linecap="round"/>
+    <path d="M0 1040 H980" stroke="#cfe0a6" stroke-width="4" opacity="0.4"/>
+    <path d="M180 1040 V1240" stroke="url(#ePipe)" stroke-width="30" stroke-linecap="round"/>
+    <path d="M520 1040 V1180" stroke="url(#ePipe)" stroke-width="26" stroke-linecap="round"/>
+    <path d="M820 1040 V1300" stroke="url(#ePipe)" stroke-width="28" stroke-linecap="round"/>
+    <g fill="#8f9c68" stroke="#cfe0a6" stroke-width="3" opacity="0.85">
+      <rect x="150" y="1000" width="60" height="80" rx="8"/>
+      <rect x="790" y="1000" width="60" height="80" rx="8"/>
+      <circle cx="980" cy="1040" r="26" fill="#5d6a3f"/>
+    </g>
+    <!-- valve wheels -->
+    <g stroke="#cfe0a6" stroke-width="6" fill="none" opacity="0.8">
+      <circle cx="520" cy="1140" r="34"/>
+      <circle cx="820" cy="1240" r="30"/>
+    </g>
+    <g stroke="#cfe0a6" stroke-width="4" opacity="0.7">
+      <path d="M486 1140 H554 M520 1106 V1174"/>
+      <path d="M790 1240 H850 M820 1210 V1270"/>
+    </g>
+  </g>
+
+  <!-- floor -->
+  <path d="M0 1180 L1200 1180 L1200 1500 L0 1500 Z" fill="#101617"/>
+  <path d="M0 1180 L1200 1180 L1200 1194 L0 1194 Z" fill="#2c3433" opacity="0.7"/>
+  <g stroke="#1d2526" stroke-width="2" opacity="0.7">
+    <path d="M0 1260 H1200 M0 1340 H1200 M0 1420 H1200"/>
+    <path d="M200 1194 V1500 M420 1194 V1500 M640 1194 V1500 M860 1194 V1500 M1080 1194 V1500"/>
+  </g>
+  <ellipse cx="600" cy="1300" rx="520" ry="120" fill="#8f9c68" opacity="0.08" filter="url(#eBlur)"/>
+
+  <!-- control panel -->
+  <g>
+    <rect x="900" y="780" width="220" height="330" rx="10" fill="#1a2122" stroke="#39413f" stroke-width="3"/>
+    <rect x="922" y="806" width="176" height="120" rx="6" fill="#0e1a19"/>
+    <g fill="#8f9c68" opacity="0.85">
+      <rect x="938" y="824" width="60" height="8" rx="4"/>
+      <rect x="938" y="846" width="120" height="6" rx="3"/>
+      <rect x="938" y="864" width="90" height="6" rx="3"/>
+      <rect x="938" y="888" width="140" height="6" rx="3"/>
+    </g>
+    <g fill="#e9cba4">
+      <circle cx="946" cy="960" r="8"/>
+      <circle cx="976" cy="960" r="8" opacity="0.5"/>
+      <circle cx="1006" cy="960" r="8" opacity="0.3"/>
+    </g>
+    <g stroke="#39413f" stroke-width="2">
+      <path d="M922 1000 H1098 M922 1040 H1098"/>
+    </g>
+  </g>
+
+  <rect width="1200" height="1500" fill="url(#eVig)"/>
+</svg>

@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900" role="img">
+  <defs>
+    <linearGradient id="cSky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0c1620"/>
+      <stop offset="0.6" stop-color="#22343a"/>
+      <stop offset="1" stop-color="#6a5b41"/>
+    </linearGradient>
+    <linearGradient id="cFacade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#39413f"/>
+      <stop offset="0.5" stop-color="#252d2e"/>
+      <stop offset="1" stop-color="#171e20"/>
+    </linearGradient>
+    <linearGradient id="cWin" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f5d7ac" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#c99c6b" stop-opacity="0.35"/>
+    </linearGradient>
+    <linearGradient id="cGround" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#232829"/>
+      <stop offset="1" stop-color="#0b1011"/>
+    </linearGradient>
+    <radialGradient id="cSun" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#f6d3a2" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#f6d3a2" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="cBlur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="16"/>
+    </filter>
+    <radialGradient id="cVig" cx="0.5" cy="0.45" r="0.78">
+      <stop offset="0.45" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0.5"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#cSky)"/>
+  <circle cx="1050" cy="560" r="340" fill="url(#cSun)"/>
+  <path d="M0 520 L180 452 L340 508 L520 440 L700 512 L880 456 L1060 520 L1240 466 L1400 528 L1400 640 L0 640 Z" fill="#14222a"/>
+
+  <!-- main administrative volume -->
+  <g>
+    <rect x="360" y="230" width="620" height="430" fill="url(#cFacade)"/>
+    <rect x="380" y="256" width="580" height="380" fill="#1c2425"/>
+    <!-- warm lit floors -->
+    <g fill="url(#cWin)" opacity="0.8">
+      <rect x="392" y="272" width="556" height="58"/>
+      <rect x="392" y="352" width="556" height="58"/>
+      <rect x="392" y="432" width="556" height="58"/>
+    </g>
+    <!-- facade fins -->
+    <g stroke="#12191a" stroke-width="10" opacity="0.85">
+      <path d="M392 256 V636 M460 256 V636 M528 256 V636 M596 256 V636 M664 256 V636 M732 256 V636 M800 256 V636 M868 256 V636 M936 256 V636"/>
+    </g>
+    <!-- roof plant -->
+    <rect x="430" y="196" width="200" height="34" fill="#2b3334"/>
+    <rect x="700" y="206" width="130" height="24" fill="#2b3334"/>
+    <rect x="640" y="176" width="30" height="54" fill="#39413f"/>
+    <!-- entrance glow -->
+    <rect x="600" y="540" width="140" height="120" fill="#f2d2a6" opacity="0.55"/>
+    <path d="M600 540 H740" stroke="#0f1516" stroke-width="6"/>
+  </g>
+
+  <!-- side wing -->
+  <g>
+    <rect x="980" y="360" width="230" height="300" fill="#232b2c"/>
+    <g fill="url(#cWin)" opacity="0.55">
+      <rect x="996" y="380" width="198" height="46"/>
+      <rect x="996" y="446" width="198" height="46"/>
+      <rect x="996" y="512" width="198" height="46"/>
+    </g>
+    <g stroke="#141b1c" stroke-width="7" opacity="0.85">
+      <path d="M1062 360 V660 M1128 360 V660 M1194 360 V660"/>
+    </g>
+  </g>
+
+  <!-- low left block -->
+  <g>
+    <rect x="120" y="470" width="230" height="190" fill="#1b2324"/>
+    <rect x="140" y="492" width="190" height="42" fill="url(#cWin)" opacity="0.45"/>
+    <rect x="140" y="552" width="190" height="42" fill="url(#cWin)" opacity="0.35"/>
+  </g>
+
+  <!-- ground -->
+  <path d="M0 660 L1400 660 L1400 900 L0 900 Z" fill="url(#cGround)"/>
+  <ellipse cx="700" cy="680" rx="520" ry="26" fill="#e9cba4" opacity="0.18" filter="url(#cBlur)"/>
+  <g stroke="#e9cba4" stroke-width="2" opacity="0.16">
+    <path d="M360 690 V860 M980 690 V860 M670 690 V880"/>
+  </g>
+  <g fill="#1d2722">
+    <ellipse cx="140" cy="720" rx="66" ry="28"/>
+    <ellipse cx="1280" cy="716" rx="72" ry="30"/>
+    <ellipse cx="960" cy="726" rx="44" ry="20"/>
+  </g>
+  <rect width="1400" height="900" fill="url(#cVig)"/>
+</svg>

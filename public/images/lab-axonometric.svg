@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 760" width="900" height="760" role="img">
+  <defs>
+    <linearGradient id="labBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1a2123"/>
+      <stop offset="1" stop-color="#0d1213"/>
+    </linearGradient>
+    <linearGradient id="labTop" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3c4543"/>
+      <stop offset="1" stop-color="#28302f"/>
+    </linearGradient>
+    <linearGradient id="labLeft" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#242c2d"/>
+      <stop offset="1" stop-color="#161d1f"/>
+    </linearGradient>
+    <linearGradient id="labRight" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2f3837"/>
+      <stop offset="1" stop-color="#1b2325"/>
+    </linearGradient>
+    <linearGradient id="labThermal" x1="0" y1="0" x2="0.6" y2="1">
+      <stop offset="0" stop-color="#e9cba4" stop-opacity="0.85"/>
+      <stop offset="0.3" stop-color="#bbc482" stop-opacity="0.7"/>
+      <stop offset="0.62" stop-color="#6fa39a" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#4b6f9b" stop-opacity="0.45"/>
+    </linearGradient>
+    <linearGradient id="labPv" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1d3440"/>
+      <stop offset="1" stop-color="#0e1a22"/>
+    </linearGradient>
+    <radialGradient id="labGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#bbc482" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#bbc482" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="labBlur" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="16"/>
+    </filter>
+    <radialGradient id="labVig" cx="0.5" cy="0.45" r="0.8">
+      <stop offset="0.45" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0.4"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="900" height="760" fill="url(#labBg)"/>
+
+  <!-- ground grid -->
+  <g stroke="#2a3335" stroke-width="1" opacity="0.5">
+    <path d="M60 560 L450 760 L840 560 L450 360 Z" fill="none"/>
+    <path d="M170 620 L450 760 M340 545 L450 600 M620 545 L450 600 M730 620 L450 760" opacity="0.5"/>
+    <path d="M60 620 L840 620" opacity="0.3"/>
+  </g>
+
+  <!-- analysis halo -->
+  <ellipse cx="470" cy="560" rx="330" ry="150" fill="url(#labGlow)"/>
+
+  <!-- main volume -->
+  <g>
+    <!-- left facade -->
+    <path d="M250 420 L450 520 L450 690 L250 590 Z" fill="url(#labLeft)"/>
+    <!-- right facade with thermal layer -->
+    <path d="M450 520 L650 420 L650 590 L450 690 Z" fill="url(#labRight)"/>
+    <path d="M450 520 L650 420 L650 590 L450 690 Z" fill="url(#labThermal)" opacity="0.55"/>
+    <!-- glazing grid on right facade -->
+    <g stroke="#0f1516" stroke-width="2.5" opacity="0.55">
+      <path d="M490 540 L490 664 M530 560 L530 642 M570 540 L570 620 M610 520 L610 598"/>
+      <path d="M450 560 L650 460 M450 600 L650 500 M450 640 L650 540"/>
+    </g>
+    <!-- top face -->
+    <path d="M250 420 L450 320 L650 420 L450 520 Z" fill="url(#labTop)"/>
+    <path d="M250 420 L450 320 L650 420" fill="none" stroke="#59625d" stroke-width="2"/>
+  </g>
+
+  <!-- rooftop PV array -->
+  <g>
+    <g fill="url(#labPv)" stroke="#6f8b8c" stroke-width="1.4">
+      <path d="M300 408 L360 378 L420 408 L360 438 Z"/>
+      <path d="M372 408 L432 378 L492 408 L432 438 Z"/>
+      <path d="M444 408 L504 378 L564 408 L504 438 Z"/>
+    </g>
+    <g stroke="#8fb0ab" stroke-width="0.9" opacity="0.55">
+      <path d="M318 408 L378 378 M336 408 L396 378 M390 408 L450 378 M462 408 L522 378"/>
+    </g>
+  </g>
+
+  <!-- secondary mass -->
+  <g>
+    <path d="M640 470 L720 430 L720 560 L640 600 Z" fill="#1e2628"/>
+    <path d="M600 450 L680 410 L760 450 L680 490 Z" fill="#313a38"/>
+    <path d="M600 450 L680 410 L680 470 L600 510 Z" fill="#232b2c"/>
+    <path d="M680 410 L760 450 L760 510 L680 470 Z" fill="#2a3231"/>
+    <g fill="#e9cba4" opacity="0.45">
+      <rect x="622" y="470" width="14" height="8" transform="skewY(-26)"/>
+      <rect x="650" y="482" width="14" height="8" transform="skewY(-26)"/>
+    </g>
+  </g>
+
+  <!-- trees -->
+  <g>
+    <g fill="#2b3a2b">
+      <ellipse cx="190" cy="470" rx="34" ry="46"/>
+      <ellipse cx="150" cy="510" rx="26" ry="34"/>
+      <ellipse cx="760" cy="500" rx="32" ry="42"/>
+      <ellipse cx="800" cy="540" rx="24" ry="32"/>
+      <ellipse cx="330" cy="600" rx="26" ry="34"/>
+    </g>
+    <g fill="#3c5038" opacity="0.8">
+      <ellipse cx="180" cy="452" rx="24" ry="30"/>
+      <ellipse cx="752" cy="482" rx="22" ry="28"/>
+    </g>
+    <g stroke="#4a5b3d" stroke-width="3">
+      <path d="M190 516 V546 M760 542 V566 M330 634 V652"/>
+    </g>
+  </g>
+
+  <!-- analysis contour rings -->
+  <g fill="none" stroke="#bbc482" stroke-width="1.4" opacity="0.5">
+    <ellipse cx="470" cy="600" rx="300" ry="130" stroke-dasharray="6 8"/>
+    <ellipse cx="470" cy="600" rx="230" ry="98" stroke-dasharray="4 7" opacity="0.7"/>
+    <ellipse cx="470" cy="600" rx="160" ry="66" stroke-dasharray="3 6" opacity="0.85"/>
+  </g>
+
+  <!-- sun path arc -->
+  <g fill="none" stroke="#e9cba4" stroke-width="1.6" opacity="0.55" stroke-dasharray="5 7">
+    <path d="M120 220 C 300 90 620 90 790 230"/>
+  </g>
+  <circle cx="790" cy="230" r="6" fill="#e9cba4"/>
+  <circle cx="790" cy="230" r="18" fill="#e9cba4" opacity="0.18" filter="url(#labBlur)"/>
+
+  <!-- metric tags -->
+  <g fill="none" stroke="#4d5a4a" stroke-width="1">
+    <path d="M560 430 L660 380"/>
+  </g>
+
+  <rect width="900" height="760" fill="url(#labVig)"/>
+</svg>
